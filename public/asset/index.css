@@ -1,0 +1,303 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+ul,
+li,
+a,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.row,
+.col-3,
+.col-9 {
+    text-decoration: none;
+    margin: 0px;
+    padding: 0px;
+    color: #000;
+}
+
+.full-dashboard {
+    height: 100vh;
+    padding: 45px 32px;
+    background-color: #FF5757;
+}
+
+ul{
+    list-style-type: none;
+}
+
+.box-shadow{
+    
+}
+
+
+
+.dashboard{
+    height: 100%;
+    background-color: #FFFFFF;
+    box-shadow: -12px 14px 35px 1px rgba(0,0,0,0.74);
+    -webkit-box-shadow: -12px 14px 35px 1px rgba(0,0,0,0.74);
+    -moz-box-shadow: -12px 14px 35px 1px rgba(0,0,0,0.74);
+}
+
+.sidebar{
+    box-sizing: border-box;
+    background-color: #FFFFFF;
+    height: 100%;
+    width: 100%;
+}
+
+.sidebar-header{
+    align-items: center;
+    font-size: 12px;
+    letter-spacing: 4%;
+    box-sizing: border-box;
+    width: 100%;
+    height: 76px;
+    border-bottom: 1px solid #F2F2F2;
+}
+
+.selected{
+    background-color: #DBE5FE;
+    color: #5A84D0;
+}
+
+.dashboard-header{
+    height: 125px;
+    background-color: #353B49;
+}
+
+.dashboard-footer{
+    height: 49px;
+}
+
+.icon-menu{
+    background-color: #2F3541;
+    width: 33px;
+    height: 33px;
+}
+
+.search->input{
+    background-color: #4B5264;
+}
+
+.input-search{
+    height: 38px;
+    width: 212px;
+    padding: 0.5rem;
+    border: none;
+    border-radius: 30px;
+    background-color: #4B5264;
+}
+
+.letter-go{
+    position: absolute;
+    top: 5px;
+    right: 15px;
+    font-weight: 600;
+}
+
+.logo-user::before{
+    content: "";
+    width: 7px;
+    height: 7px;
+    background-color: #4C76DC;
+    position: absolute;
+    top: 25px;
+    right: 0px;
+    border-radius: 50%;
+}
+
+.logo-user .collapse {
+    position: absolute;
+    z-index: 1000;
+}
+
+.dashboard-footer{
+    
+    height: 50px;
+    background-color: #353B49;
+}
+
+.pagination {
+    justify-content: center;
+}
+
+.pagination li {
+    display: inline-block;
+    margin: 0 5px;
+}
+
+.pagination li a,
+.pagination li span {
+    color: #4a5568;
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 3px;
+    border: 1px solid #cbd5e0;
+}
+
+.pagination li.active span {
+    color: #fff;
+    background-color: #667eea;
+    border-color: #667eea;
+}
+
+.pagination li.disabled span {
+    color: #a0aec0;
+    background-color: #f7fafc;
+}
+
+.pagination li a:hover {
+    background-color: #ebf4ff;
+}
+
+.manage-employees{
+    border-bottom: 1px solid #4944442d;
+    border-radius: 4px;
+    
+}
+
+.manage-employees .header,
+.addnew .header,
+.edit .header{
+    border-radius: 4px 4px 0 0;
+    background-color: #353B49;
+    
+}
+
+.manage-employees .header .title h2,
+.addnew .header .title h2,
+.edit .header .title h2{
+    color: #FFFFFF;
+    padding: 10px 20px;
+}
+
+.vishweb h3{
+    color: #5C6270;
+}
+
+.manage-employees .header .addnew{
+    background-color: #29A245;
+    color: white;
+    padding: 10px 20px;
+}
+.manage-employees .header .clear{
+    padding: 10px 20px;
+}
+
+
+.manage-employees .header .addnew span,
+.manage-employees .header .clear span{
+    font-size: 20px;
+}
+
+.delete-icon{
+    border: none;
+    background: none;
+}
+
+@media screen and (max-width: 1150px) {
+    .sidebar {
+        display: none;
+    }
+    .col-9 {
+        width: 100%;
+    }
+    .manage-employees .header .addnew{
+        background-color: #29A245;
+        color: white;
+        padding: 8px 18px;
+    }
+    .manage-employees .header .clear{
+        color: white;
+        padding: 8px;
+    }
+    .pagination .number_items_page_length{
+        display: none;
+    }
+    
+    
+}
+
+.manage-employees .title h2{
+    font-size: clamp(1rem, 2.5vw, 2rem);
+}
+
+.pagination{
+    margin-bottom: 1rem;
+}
+
+.pagination li{
+    border: none;
+}
+
+.pagination li a{
+    color: #ccc;
+    border: none;
+}
+
+.pagination li a.previous {
+    color: #ccc;
+    border: none;
+}
+
+.pagination li span.previous {
+    color: #ccc;
+    border: none;
+}
+
+.pagination li.current-page span {
+    color: #ccc;
+    border: none;
+    padding: 7px 13px
+}
+
+.pagination li a.next {
+    color: #ccc;
+    border: none;
+}
+
+.pagination li span.next {
+    color: #ccc;
+    border: none;
+    background: none;
+}
+
+.pagination li.disabled span {
+    color: #a0aec0;
+    background: none !important;
+}
+
+.pagination li a.page-number {
+    color: #ccc;
+    border: none;
+}
+
+.pagination li span.length{
+    border: none;
+}
+
+.pagination li span.number_length {
+    font-weight: 600;
+    border: none;
+}
+
+.page-item.active {
+    transform: scale(0.8);
+    
+}
+
+.table td, .table th {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%; /* Tùy chỉnh kích thước ô */
+}
