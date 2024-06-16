@@ -189,13 +189,14 @@ ul{
     color: white;
     padding: 10px 20px;
 }
-.manage-employees .header .clear{
+.manage-employees .header .delete_selected{
     padding: 10px 20px;
+    
 }
 
 
 .manage-employees .header .addnew span,
-.manage-employees .header .clear span{
+.manage-employees .header .delete_selected span{
     font-size: 20px;
 }
 
@@ -216,7 +217,7 @@ ul{
         color: white;
         padding: 8px 18px;
     }
-    .manage-employees .header .clear{
+    .manage-employees .header .delete_selected{
         color: white;
         padding: 8px;
     }

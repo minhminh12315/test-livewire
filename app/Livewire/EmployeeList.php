@@ -19,7 +19,7 @@ class EmployeeList extends Component
 
     public function delete($id)
     {
-        try{
+        try {
             $employee = employees::find($id);
             $employee->delete();
         } catch (\Exception $e) {
@@ -27,13 +27,24 @@ class EmployeeList extends Component
         }
     }
 
-    public function deleteSelected()
-{
-    try {
-        employees::destroy($this->selected);
-        $this->selected = [];
-    } catch (\Exception $e) {
-        dd($e);
+    public function toggleEmployeeSelection($id)
+    {
+        if (in_array($id, $this->selected)) {
+            $this->selected = array_filter($this->selected, function ($value) use ($id) {
+                return $value != $id;
+            });
+        } else {
+            $this->selected[] = $id;
+        }
     }
-}
+
+    public function deleteSelected()
+    {
+        try {
+            employees::destroy($this->selected);
+            $this->selected = [];
+        } catch (\Exception $e) {
+            dd($e);
+        }
+    }
 }
