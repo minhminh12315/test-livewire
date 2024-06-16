@@ -7,7 +7,7 @@
                 <h2>Manage Employees</h2>
             </div>
             <div class="d-flex flex-wrap gap-2 pe-5 align-items-center">
-                <button wire:click="deleteSelected" wire:confirm="Are you sure you want to delete those?" class="btn btn-danger h-45 d-flex align-items-center gap-1 clear">
+                <button wire:click="deleteSelected" wire:confirm="Are you sure you want to delete these items?" class="btn btn-danger h-45 d-flex align-items-center gap-1 clear">
                     <span class="material-symbols-outlined text-dark bg-light border-none rounded-circle">
                         remove
                     </span>Delete</button>
