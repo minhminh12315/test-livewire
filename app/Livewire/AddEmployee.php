@@ -14,6 +14,12 @@ class AddEmployee extends Component
     public $address;
     public function saveEmployee()
     {   
+        $this->validate([
+            'name' => 'required',
+            'email' => 'required|email',
+            'phone' => 'required',
+            'address' => 'required',
+        ]);
         try{
             $new_employee = new employees;
             $new_employee->name = $this->name;

@@ -28,7 +28,7 @@ class EmployeeList extends Component
 
     public function clear()
     {
-        $this->reset();
+        employees::truncate();
         return redirect('/employees');
     }
 }
