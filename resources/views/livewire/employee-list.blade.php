@@ -7,7 +7,7 @@
                 <h2>Manage Employees</h2>
             </div>
             <div class="d-flex flex-wrap gap-2 pe-5 align-items-center">
-                <button wire:click="clear" wire:confirm="Are you sure you want to clear those?" class="btn btn-danger h-45 d-flex align-items-center gap-1 clear">
+                <button wire:click="deleteSelected" wire:confirm="Are you sure you want to delete those?" class="btn btn-danger h-45 d-flex align-items-center gap-1 clear">
                     <span class="material-symbols-outlined text-dark bg-light border-none rounded-circle">
                         remove
                     </span>Delete</button>
@@ -24,7 +24,7 @@
             <table class="table table-striped fs-5">
                 <thead>
                     <tr>
-                        <td class="pt-3 pb-3" scope="col"><input type="checkbox" name="" id=""></td>
+                        <td class="pt-3 pb-3" scope="col"><input disabled type="checkbox" name="" id=""></td>
                         <td class="pt-3 pb-3" scope="col">Name</td>
                         <td class="pt-3 pb-3" scope="col">Email</td>
                         <td class="pt-3 pb-3" scope="col">Phone</td>
@@ -35,7 +35,7 @@
                 <tbody>
                     @foreach ($employees as $e)
                     <tr >
-                        <td class="pt-3 pb-3"><input type="checkbox" name="" id=""></td>
+                        <td class="pt-3 pb-3"><input type="checkbox" name="check" id="" wire:model="selected.{{ $e->id }}"></td>
                         <td class="pt-3 pb-3">{{ $e->name }}</td>
                         <td class="pt-3 pb-3">{{ $e->email }}</td>
                         <td class="pt-3 pb-3">({{ $e->phone }})</td>

@@ -9,6 +9,7 @@ use Livewire\WithPagination;
 class EmployeeList extends Component
 {
     use WithPagination;
+    public $selected = [];
     public function render()
     {
         return view('livewire.employee-list', [
@@ -26,9 +27,13 @@ class EmployeeList extends Component
         }
     }
 
-    public function clear()
-    {
-        employees::truncate();
-        return redirect('/employees');
+    public function deleteSelected()
+{
+    try {
+        employees::destroy($this->selected);
+        $this->selected = [];
+    } catch (\Exception $e) {
+        dd($e);
     }
+}
 }
